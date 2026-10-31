@@ -1,0 +1,7 @@
+# AI Agent
+
+.claude/*
+.codex/*
+!.claude/.gitkeep
+!.codex/.gitkeep
+

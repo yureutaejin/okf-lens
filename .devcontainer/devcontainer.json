@@ -1,0 +1,53 @@
+{
+  "name": "devcontainer-okf-lens",
+  "remoteUser": "vscode",
+  "containerUser": "vscode",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "mounts": [
+    {
+      "source": "${localWorkspaceFolder}/.codex",
+      "target": "/home/vscode/.codex",
+      "type": "bind"
+    },
+    {
+      "source": "${localWorkspaceFolder}/.claude",
+      "target": "/home/vscode/.claude",
+      "type": "bind"
+    }
+  ],
+  "runArgs": [
+    "--name",
+    "devcontainer-okf-lens",
+    "--net=host",
+    "--add-host=host.docker.internal:host-gateway"
+  ],
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+      "moby": false
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Anthropic.claude-code",
+        "bierner.markdown-mermaid",
+        "eamodio.gitlens",
+        "GitHub.vscode-pull-request-github",
+        "mhutchie.git-graph",
+        "openai.chatgpt",
+        "yzhang.markdown-all-in-one",
+        // Development extensions
+        "arahata.linter-actionlint",
+        "denoland.vscode-deno"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+      }
+    }
+  },
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind,consistency=cached"
+}
