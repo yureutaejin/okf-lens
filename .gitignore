@@ -5,3 +5,5 @@
 !.claude/.gitkeep
 !.codex/.gitkeep
 
+# APM dependencies
+apm_modules/

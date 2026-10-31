@@ -1,0 +1,18 @@
+name: okf-lens
+version: 0.0.1
+description: Agent context and integrations for okf-lens, managed by Microsoft APM.
+author: Yuntae Jin
+
+# Claude is the single installation target. Local primitives in `.apm/` are the
+# source of truth; never edit generated files below `.claude/` directly.
+targets:
+  - claude
+
+# Add reusable agent packages and MCP servers here, then run `apm install`.
+# Do not hand-author agent configuration in `.claude/`.
+dependencies:
+  apm: []
+  mcp: []
+
+includes: auto
+scripts: {}

@@ -1,0 +1,27 @@
+lockfile_version: '1'
+dependencies: []
+deployments:
+- kind: project-relative
+  target: claude
+  value: .claude/rules/agent-management.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:dd69434be038b80ce97b3469af92b7411ffcb75f92f0cc1d6ea82b16ffdafb6c
+- kind: project-relative
+  target: claude
+  value: .claude/rules/skill-specification.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:baf76c913d9c6e120f3676f4ae07c7f3fe6169aed736d83d04260a18e7ed46c0
+local_deployed_files:
+- .claude/rules/agent-management.md
+- .claude/rules/skill-specification.md
+local_deployed_file_hashes:
+  .claude/rules/agent-management.md: sha256:dd69434be038b80ce97b3469af92b7411ffcb75f92f0cc1d6ea82b16ffdafb6c
+  .claude/rules/skill-specification.md: sha256:baf76c913d9c6e120f3676f4ae07c7f3fe6169aed736d83d04260a18e7ed46c0
